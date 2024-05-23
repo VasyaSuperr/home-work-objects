@@ -42,3 +42,15 @@ console.log("copyCustomer :>> ", copyCustumer);
 const correctCustomerCopy = Object.assign({}, customer);
 correctCustomerCopy.name = "Boris";
 console.log("correctCustomerCopy :>> ", correctCustomerCopy);
+
+console.log("Task 2");
+const cat = {
+  name: "Murka",
+  color: "black",
+  isMale: false,
+  isFurnitureDemage: true,
+};
+
+for (let key in cat) {
+  console.log(`${key} --- ${cat[key]}`);
+}
