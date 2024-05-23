@@ -51,6 +51,38 @@ const cat = {
   isFurnitureDemage: true,
 };
 
+// Cycle
 for (let key in cat) {
   console.log(`${key} --- ${cat[key]}`);
 }
+
+console.log("Task 3");
+function Book(author, title, year, puplishingHouse, price) {
+  this.author = author;
+  this.title = title;
+  this.year = year;
+  this.puplishingHouse = puplishingHouse;
+  this.price;
+}
+
+const book1 = new Book(
+  "Дж. К. Ролінг",
+  "Гаррі Поттер і філософський камінь",
+  1997,
+  "Bloomsbury",
+  20
+);
+
+Book.prototype.getAgeBook = function () {
+  return new Date().getFullYear() - this.year;
+};
+
+const ageBook1 = book1.getAgeBook();
+console.log("ageBook1 :>> ", ageBook1);
+
+Book.prototype.changePriceBook = function (newPrice) {
+  this.price = newPrice;
+};
+
+book1.changePriceBook(50);
+console.log("book1 :>> ", book1);
